@@ -1,16 +1,8 @@
-use tradingsystem
-go
+
 
 insert into trader values (1, "Bob");
 insert into trader values (2, "Fred");
 insert into trader values (3, "Jack");
-
-
-insert into book values (1, "Bob Tech book", 1, "USD");
-insert into book values (2, "Bob global portfolio", 1, "USD");
-insert into book values (3, "Freds portfolio", 2, "EUR");
-insert into book values (4, "Jacks", 3, "GBP");
-
 
 
 insert into currency values ("USD", "US Dollars");
@@ -18,6 +10,10 @@ insert into currency values ("GBP", "Pound");
 insert into currency values ("EUR", "EURO");
 insert into currency values ("CAD", "CAD Dollars");
 
+insert into book values (1, "Bob Tech book", 1, "USD");
+insert into book values (2, "Bob global portfolio", 1, "USD");
+insert into book values (3, "Freds portfolio", 2, "EUR");
+insert into book values (4, "Jacks", 3, "GBP");
 
 insert into asset values (1, "Google", "Equity", "USD");
 insert into asset values (2, "Apple", "Equity", "USD");
@@ -103,7 +99,7 @@ insert into trade values (4,7,"20190101",6000,400,"F");
 insert into trade values (4,8,"20190101",4000,160,"F");
 insert into trade values (4,9,"20190101",3000,90.9090909090909,"F");
 
-go
+
 
  
 

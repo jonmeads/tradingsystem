@@ -1,5 +1,3 @@
-CREATE SCHEMA trandingsystem
-go
 
 
 CREATE TABLE trader (
@@ -10,6 +8,17 @@ CREATE UNIQUE index idx_trader on trader(id);
 
 ALTER TABLE trader
 ADD CONSTRAINT PK_trader PRIMARY KEY (id);
+
+
+CREATE TABLE currency (
+	code char(3),
+	name varchar(50)
+);
+
+CREATE UNIQUE index idx_currency on currency(code); 
+
+ALTER TABLE currency
+ADD CONSTRAINT PK_currency PRIMARY KEY (code);
 
 
 CREATE TABLE book (
@@ -31,16 +40,6 @@ ALTER TABLE book
 ADD CONSTRAINT FK_currencybook
 FOREIGN KEY (currency) REFERENCES currency(code);
 
-
-CREATE TABLE currency (
-	code char(3),
-	name varchar(50)
-);
-
-CREATE UNIQUE index idx_currency on currency(code); 
-
-ALTER TABLE currency
-ADD CONSTRAINT PK_currency PRIMARY KEY (code);
 
 
 
@@ -124,7 +123,7 @@ ALTER TABLE trade
 ADD CONSTRAINT FK_asset_trade
 FOREIGN KEY (asset_id) REFERENCES asset(id);
 
-go
+
 
 
 
